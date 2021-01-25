@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>DASHBOARD</title>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	backgroundColor: "#27293D",
+	theme: "light4",
+	title:{
+		text: "Performance"
+	},
+	axisX: {
+        valueFormatString: "MMM",
+        interval:1,
+        intervalType: "month"
+      },
+	data: [{        
+		type: "line",
+      	indexLabelFontSize: 16,
+      	lineColor: "#D84FD3",
+      	markerColor: "#D84FD3",
+		dataPoints: [
+			{ x: new Date(2012, 00, 1), y: 100 },
+			{ x: new Date(2012, 01, 1), y: 70},
+			{ x: new Date(2012, 02, 1), y: 90}, //indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+			{ x: new Date(2012, 03, 1), y: 70 },
+			{ x: new Date(2012, 04, 1), y: 85 },
+			{ x: new Date(2012, 05, 1), y: 60 },
+			{ x: new Date(2012, 06, 1), y: 75 },
+			{ x: new Date(2012, 07, 1), y: 60 },
+			{ x: new Date(2012, 08, 1), y: 90 }, //indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+			{ x: new Date(2012, 09, 1), y: 80 },
+			{ x: new Date(2012, 10, 1), y: 110 },
+			{ x: new Date(2012, 11, 1), y: 100 }
+		]
+	}]
+});
+chart.render();
+
+}
+
+</script>
+
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartCon", {
+	animationEnabled: true,
+	backgroundColor: "#27293D",
+	theme: "light4",
+	title:{
+		text: "Performance"
+	},
+	axisX: {
+        valueFormatString: "MMM",
+        interval:1,
+        intervalType: "month"
+      },
+	data: [{        
+		type: "line",
+      	indexLabelFontSize: 16,
+      	lineColor: "#D84FD3",
+      	markerColor: "#D84FD3",
+		dataPoints: [
+			{ x: new Date(2012, 00, 1), y: 100 },
+			{ x: new Date(2012, 01, 1), y: 70},
+			{ x: new Date(2012, 02, 1), y: 90}, //indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+			{ x: new Date(2012, 03, 1), y: 70 },
+			{ x: new Date(2012, 04, 1), y: 85 },
+			{ x: new Date(2012, 05, 1), y: 60 },
+			{ x: new Date(2012, 06, 1), y: 75 },
+			{ x: new Date(2012, 07, 1), y: 60 },
+			{ x: new Date(2012, 08, 1), y: 90 }, //indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+			{ x: new Date(2012, 09, 1), y: 80 },
+			{ x: new Date(2012, 10, 1), y: 110 },
+			{ x: new Date(2012, 11, 1), y: 100 }
+		]
+	}]
+});
+chart.render();
+
+}
+
+</script>
+
+<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Top Oil Reserves"    
+      },
+      axisY: {
+        title: "Reserves(MMbbl)"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      data: [
+
+      {        
+        color: "#B0D0B0",
+        type: "column",  
+        showInLegend: true, 
+        legendMarkerType: "none",
+        legendText: "MMbbl = one million barrels",
+        dataPoints: [      
+        { x: 1, y: 297571, label: "Venezuela"},
+        { x: 2, y: 267017,  label: "Saudi" },
+        { x: 3, y: 175200,  label: "Canada"},
+        { x: 4, y: 154580,  label: "Iran"},
+        { x: 5, y: 116000,  label: "Russia"},
+        { x: 6, y: 97800, label: "UAE"},
+        { x: 7, y: 20682,  label: "US"},        
+        { x: 8, y: 20350,  label: "China"}
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<style></style>
+<body style="background-color: #1E1E24;">
+      <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">DASHBOARD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" style="">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <img src="https://img.icons8.com/android/24/ffffff/search.png"/>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+
+    <div style="color: white; margin-top: 100px; margin-left: 40px;" class="row">
+  		<div class="col-2" style="background-color: #D84FD3;">
+	  		<nav class="nav flex-column" style="margin-left: 20px; margin-top: 40px;">
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/pastel-glyph/30/ffffff/pie-chart.png"><span style="color: white; margin-left: 10px; font-size: 10px;">DASHBOARD</span></a><br>
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/metro/30/ffffff/physics.png"/><span style="margin-left: 10px; color: white; font-size: 10px;">ICONS</span></a><br>
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/small/30/ffffff/pin3.png"/><span style="margin-left: 10px; color: white; font-size: 10px;">MAPS</span></a><br>
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/ios/30/ffffff/appointment-reminders--v1.png"/><span style="margin-left: 10px; color: white; font-size: 10px;">NOTIFICATION</span></a><br>
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/material-outlined/30/ffffff/user--v1.png"/><span style="margin-left: 10px; color: white; font-size: 10px;">USER PROFILE</span></a><br>
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/metro/30/ffffff/add-list.png"/><span style="margin-left: 10px; color: white; font-size: 10px;">Table LIST</span></a><br>
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/ios/30/ffffff/bar-chart--v1.png"/><span style="margin-left: 10px; color: white; font-size: 10px;">TYPOGRAPHY</span></a><br>
+				  <a class="nav-link" href="#"><img src="https://img.icons8.com/fluent-systems-regular/30/ffffff/technical-support.png"/><span style="margin-left: 10px; font-size: 10px; color: white;">SUPPORT</span></a><br>
+		    </nav>
+  		</div>
+
+  		<div class="col-10">
+  			<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+			<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+			<!--<div class="row" style="margin-top: 30px;">
+	        <div class="col-3" style="background-color: #27293D; margin-left: 15px;">
+	        	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+				<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	        </div>
+  			<div class="col-4" style="background-color: #27293D; margin-left: 30px;">
+  				<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  			</div>
+  			<div class="col-4" style="background-color: #27293D; margin-left: 30px;">
+  				<div id="" style="height: 300px; width: 100%;"></div>
+				<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  			</div>
+  			</div>
+
+  			<div class="row" style="margin-top: 30px;">
+	        <div class="col-6" style="background-color: #27293D; margin-left: 15px;">
+	        	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+				<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	        </div>
+  			<div class="col-5" style="background-color: #27293D; margin-left: 50px;">
+  				<div id="" style="height: 300px; width: 100%;"></div>
+			 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  			</div>-->
+  			</div>
+  			</div>
+  		</div>
+
+  		
+  		
+  	</div>
+
+  	
+
+
+
+</body>
+</html>
